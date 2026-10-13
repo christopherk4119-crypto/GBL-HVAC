@@ -10,7 +10,8 @@ import { FAQS } from "@/lib/faq";
 import { REVIEWS } from "@/lib/reviews";
 import { SERVICES, serviceHref } from "@/lib/services";
 import { faqSchema } from "@/lib/schema";
-import { SHOW_PHOTOS } from "@/lib/site";
+import vanRear from "@/public/images/gbl-hvac-van-rear.webp";
+import vanSide from "@/public/images/gbl-hvac-van-side.webp";
 
 export const metadata: Metadata = {
   title: "24/7 Furnace Repair & HVAC Calgary | GBL HVAC",
@@ -44,27 +45,42 @@ export default function Home() {
 
       {/* 2. HERO — one promise, one action */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-6xl px-4 pb-8 pt-6 sm:pb-12 sm:pt-12">
-          <p className="inline-flex items-center gap-2 rounded-md bg-frost-wash px-2 py-1 text-sm font-bold text-frost-deep">
-            <span className="h-2 w-2 rounded-full bg-flame" aria-hidden="true" /> Answering now — 24 hours, 7 days
-          </p>
-          <h1 className="mt-3 max-w-3xl text-4xl font-black leading-[1.05] tracking-tight text-ink sm:text-6xl">
-            Cold house? Get your heat back.
-            <span className="mt-2 block text-2xl font-extrabold text-flame-deep sm:text-4xl">
-              24/7 furnace repair in Calgary.
-            </span>
-          </h1>
-          <p className="mt-4 max-w-xl text-xl font-semibold text-ink-soft">We answer when it&apos;s 2am and the house is cold.</p>
+        <div className="mx-auto grid max-w-6xl gap-6 px-4 pb-8 pt-6 sm:pb-12 sm:pt-12 md:grid-cols-[1.15fr_1fr] md:items-center md:gap-10">
+          <div>
+            <p className="inline-flex items-center gap-2 rounded-md bg-frost-wash px-2 py-1 text-sm font-bold text-frost-deep">
+              <span className="h-2 w-2 rounded-full bg-flame" aria-hidden="true" /> Answering now — 24 hours, 7 days
+            </p>
+            <h1 className="mt-3 max-w-3xl text-4xl font-black leading-[1.05] tracking-tight text-ink sm:text-6xl">
+              Cold house? Get your heat back.
+              <span className="mt-2 block text-2xl font-extrabold text-flame-deep sm:text-4xl">
+                24/7 furnace repair in Calgary.
+              </span>
+            </h1>
+            <p className="mt-4 max-w-xl text-xl font-semibold text-ink-soft">We answer when it&apos;s 2am and the house is cold.</p>
 
-          <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-start">
-            <CallButton />
-            <Link
-              href="/contact"
-              className="inline-flex min-h-12 items-center justify-center rounded-xl border-2 border-line px-5 font-bold text-ink-soft hover:border-ink hover:text-ink sm:min-h-16"
-            >
-              Request a quote
-            </Link>
+            <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-start">
+              <CallButton />
+              <Link
+                href="/contact"
+                className="inline-flex min-h-12 items-center justify-center rounded-xl border-2 border-line px-5 font-bold text-ink-soft hover:border-ink hover:text-ink sm:min-h-16"
+              >
+                Request a quote
+              </Link>
+            </div>
           </div>
+
+          {/* Real photo of the company van. Below the buttons on phones so the call button stays above the fold. */}
+          <figure>
+            <Image
+              src={vanRear}
+              alt="White GBL HVAC van with orange and blue stripe, marked 24/7 Emergency Service and 403-970-6988"
+              sizes="(min-width: 1152px) 500px, (min-width: 768px) 44vw, calc(100vw - 32px)"
+              preload
+              placeholder="blur"
+              className="aspect-[16/10] h-auto w-full rounded-xl object-cover object-[50%_60%] md:aspect-[4/3]"
+            />
+            <figcaption className="mt-2 text-sm font-semibold text-ink-soft">The van that pulls up at your door.</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -137,19 +153,16 @@ export default function Home() {
       {/* 6. WHO YOU'RE CALLING — all placeholders until the client supplies them */}
       <section aria-labelledby="who" className="bg-mist">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:py-14 md:grid-cols-[1fr_1.4fr] md:items-center">
-          {/* [[CLIENT PHOTO]] Owner or truck photo. Hidden until SHOW_PHOTOS is true in lib/site.ts
-              and the file exists at /public/owner.jpg. Real photos only — no stock, no AI people. */}
-          {SHOW_PHOTOS ? (
-            <Image
-              src="/owner.jpg"
-              alt="[[CLIENT PHOTO: describe who/what is in the photo]]"
-              width={640}
-              height={480}
-              sizes="(min-width: 768px) 40vw, 100vw"
-              className="h-auto w-full rounded-xl"
-            />
-          ) : null}
-          <div className={SHOW_PHOTOS ? "" : "md:col-span-2 md:max-w-3xl"}>
+          {/* [[CLIENT PHOTO]] Swap in a photo of the owner when one exists — a face beats a van.
+              Real photos only: no stock, no AI-generated people. */}
+          <Image
+            src={vanSide}
+            alt="Side of the GBL HVAC van: install, repair, maintenance, 24/7 emergency service, heating, ventilation, air conditioning and refrigeration"
+            sizes="(min-width: 1152px) 460px, (min-width: 768px) 40vw, calc(100vw - 32px)"
+            placeholder="blur"
+            className="h-auto w-full rounded-xl"
+          />
+          <div>
             <h2 id="who" className="text-3xl font-black tracking-tight sm:text-4xl">
               Who you&apos;re calling
             </h2>

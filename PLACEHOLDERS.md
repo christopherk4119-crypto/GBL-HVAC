@@ -25,7 +25,7 @@ Nothing below was invented. Every item is either unknown or needs the client's y
 
 | Placeholder | Where | Notes |
 |---|---|---|
-| `[[CLIENT PHOTO]]` | `app/page.tsx` | Hidden (`SHOW_PHOTOS = false` in `lib/site.ts`). Drop `/public/owner.jpg`, write real alt text, flip the flag. Truck photos work here too. |
+| `[[CLIENT PHOTO]]` | `app/page.tsx` "Who you're calling" | Currently shows the side photo of the van. Swap for a photo of the owner when he has one; a face builds more trust than a van. Real photos only. |
 | `[[CLIENT LOGO]]` | `components/Logo.tsx`, `app/icon.svg` | Current mark is a stand-in drawn to echo the truck badge. Get the real vector file. |
 | `[[EMAIL]]` | `app/contact/page.tsx` | Add a row once confirmed. |
 | `[[CONFIRM]]` SMS | `lib/site.ts` `QUOTE_BY_TEXT` | Quote form opens a pre-filled text to 403-970-6988. If that number is a landline, set `false`. |

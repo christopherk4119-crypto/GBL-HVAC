@@ -23,11 +23,6 @@ export const SITE_URL = (
 
 export const BUSINESS_ID = `${SITE_URL}/#business`;
 
-// Client currently has no job or owner photos (only truck photos).
-// Photo slots stay in the code but render nothing until this is true
-// and a real photo is in /public. See PLACEHOLDERS.md.
-export const SHOW_PHOTOS = false;
-
 // [[CONFIRM]] Quote form opens a pre-filled text message to the business number.
 // Only works if 403-970-6988 can receive SMS. If it's a landline, set to false
 // and the contact page shows call-only.
