@@ -167,14 +167,14 @@ export default function Home() {
               Who you&apos;re calling
             </h2>
             <p className="mt-4 text-xl font-bold">
-              [[OWNER NAME]] answers the phone. Not a call centre. Not a dispatcher.
+              Quinn answers the phone. Not a call centre. Not a dispatcher.
             </p>
             <p className="mt-3 text-lg text-ink-soft">
               [[PLACEHOLDER: a sentence in the owner&apos;s own words about how they work]]
             </p>
             <p className="mt-3 text-lg text-ink-soft">
               17 years in the trade, commercial and residential — from restaurants and coffee shops to the furnace in your basement.
-              In May 2026 he went out on his own and started GBL HVAC.
+              In May 2026 Quinn went out on his own and started GBL HVAC.
             </p>
             <CallButton size="md" className="mt-6" label="Call" sub={null} />
           </div>
