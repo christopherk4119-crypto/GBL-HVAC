@@ -14,12 +14,9 @@ export const BUSINESS = {
   area: "Calgary and surrounding area",
 } as const;
 
-// [[DOMAIN]] — set NEXT_PUBLIC_SITE_URL in Vercel (e.g. https://www.yourdomain.ca).
-// Canonicals, sitemap, robots and schema @id all derive from this.
-// The fallback is a non-resolving .invalid host so a forgotten env var is obvious.
-export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://domain-placeholder.invalid"
-).replace(/\/$/, "");
+// Production domain. Canonicals, sitemap, robots and schema @id all derive from this.
+// NEXT_PUBLIC_SITE_URL can override it (e.g. for a staging deploy).
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.gblhvac.ca").replace(/\/$/, "");
 
 export const BUSINESS_ID = `${SITE_URL}/#business`;
 

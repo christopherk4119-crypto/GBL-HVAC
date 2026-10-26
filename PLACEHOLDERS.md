@@ -7,7 +7,6 @@ Nothing below was invented. Every item is either unknown or needs the client's y
 
 | Placeholder | Where | What's needed |
 |---|---|---|
-| `[[DOMAIN]]` | `lib/site.ts` → set `NEXT_PUBLIC_SITE_URL` in Vercel | Canonicals, sitemap, robots, schema `@id` all use it. Until set they point at `domain-placeholder.invalid`. |
 | `[[YEARS]]` | `app/page.tsx` trust strip + "Who you're calling" | Years in business. If he won't give a number, swap the stat for something else true. |
 | `[[OWNER NAME]]` | `app/page.tsx` "Who you're calling" | Name of the person who answers. |
 | `[[PLACEHOLDER: owner's own words]]` | `app/page.tsx` "Who you're calling" | One sentence, in his words, on how he works. Ask him; don't write it for him. |

@@ -9,7 +9,7 @@ npm run build          # production build
 npm run placeholders   # lists every [[PLACEHOLDER]] still in the source
 ```
 
-Deploy on Vercel and set `NEXT_PUBLIC_SITE_URL` to the real domain (e.g. `https://www.gblhvac.ca`).
+Production domain is `https://www.gblhvac.ca` (set in `lib/site.ts`; `NEXT_PUBLIC_SITE_URL` overrides it).
 
 - Business facts: `lib/site.ts`
 - Service page content: `lib/services.ts` (one object per page; the template is `app/services/[slug]/page.tsx`)
