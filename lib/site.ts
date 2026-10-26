@@ -1,6 +1,6 @@
 // Single source of truth for business facts.
 // Everything here is either CONFIRMED (from the client / Yelp / the truck)
-// or an explicit [[PLACEHOLDER]]. Do not add anything that isn't one of those.
+// or confirmed by the owner. Do not add anything that isn't one of those.
 
 export const BUSINESS = {
   name: "GBL HVAC",
@@ -18,6 +18,9 @@ export const BUSINESS = {
 // Production domain. Canonicals, sitemap, robots and schema @id all derive from this.
 // NEXT_PUBLIC_SITE_URL can override it (e.g. for a staging deploy).
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.gblhvac.ca").replace(/\/$/, "");
+
+// Calgary plus the surrounding towns Quinn covers. Feeds schema areaServed.
+export const AREA_SERVED = ["Calgary", "Airdrie", "Cochrane", "Okotoks", "Chestermere"];
 
 export const BUSINESS_ID = `${SITE_URL}/#business`;
 

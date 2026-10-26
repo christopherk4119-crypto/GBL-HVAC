@@ -21,7 +21,8 @@ export type Service = {
 
 // Used on every service page's cost section until the client supplies numbers.
 const QUOTE_FIRST =
-  "We quote before we start. You get the price for the job before any work is done, and you decide whether to go ahead.";
+  "Every job is quoted. You get the price before any work is done, and you decide whether to go ahead.";
+const SAME_RATE = "No extra charge for nights, weekends or holidays. A 2am call costs the same as a 2pm call.";
 
 export const SERVICES: Service[] = [
   // ───────────────────────────────── FURNACE REPAIR (money page) ─────────────────────────────────
@@ -121,7 +122,7 @@ export const SERVICES: Service[] = [
         ],
       },
     ],
-    cost: ["[[PRICING: furnace diagnostic / service call fee]]", QUOTE_FIRST],
+    cost: [QUOTE_FIRST, SAME_RATE],
     related: ["emergency-hvac-calgary", "furnace-installation-calgary", "hvac-maintenance-calgary"],
   },
 
@@ -161,7 +162,7 @@ export const SERVICES: Service[] = [
       },
       {
         title: "Changeout day",
-        body: "The old furnace comes out, the new one goes in. That means connecting gas, venting, the condensate drain on a high-efficiency unit, ductwork, power and the thermostat. A straight swap is usually a one-day job. [[CONFIRM: typical changeout time]]",
+        body: "The old furnace comes out, the new one goes in. That means connecting gas, venting, the condensate drain on a high-efficiency unit, ductwork, power and the thermostat. A straight swap is usually a one-day job.",
       },
       {
         title: "Start-up and check",
@@ -189,7 +190,7 @@ export const SERVICES: Service[] = [
         ],
       },
     ],
-    cost: ["[[PRICING: furnace replacement price range, if the client wants to publish one]]", QUOTE_FIRST],
+    cost: [QUOTE_FIRST, SAME_RATE],
     related: ["furnace-repair-calgary", "heat-pump-installation-calgary", "air-conditioning-installation-calgary"],
   },
 
@@ -250,11 +251,11 @@ export const SERVICES: Service[] = [
       },
       {
         title: "We come out",
-        body: "If it's not something you can fix from the hallway, we come out, find the problem and tell you what it'll cost before we fix it. [[CONFIRM: how arrival times are communicated]]",
+        body: "If it's not something you can fix from the hallway, we come out, find the problem and tell you what it'll cost before we fix it. When you call, ask when we can be there and you'll get a straight answer.",
       },
       {
         title: "Heat back on, or a safe plan",
-        body: "Most of the time that means fixing it on the spot. If a part has to be ordered, we'll tell you straight and talk through options to keep the house safe and warm until it's in. [[CONFIRM: whether temporary heaters are offered]]",
+        body: "Most of the time that means fixing it on the spot. If a part has to be ordered, we'll tell you straight and talk through how to keep the house safe and warm until it's in.",
       },
     ],
     extra: [
@@ -283,10 +284,7 @@ export const SERVICES: Service[] = [
         ],
       },
     ],
-    cost: [
-      "[[CONFIRM WITH CLIENT: after-hours / weekend rate, or same rate any hour]]",
-      QUOTE_FIRST,
-    ],
+    cost: [SAME_RATE, QUOTE_FIRST],
     related: ["furnace-repair-calgary", "ac-repair-calgary", "hvac-maintenance-calgary"],
   },
 
@@ -357,7 +355,7 @@ export const SERVICES: Service[] = [
         ],
       },
     ],
-    cost: ["[[PRICING: AC diagnostic / service call fee]]", QUOTE_FIRST],
+    cost: [QUOTE_FIRST, SAME_RATE],
     related: ["air-conditioning-installation-calgary", "heat-pump-installation-calgary", "hvac-maintenance-calgary"],
   },
 
@@ -396,7 +394,7 @@ export const SERVICES: Service[] = [
       },
       {
         title: "Install",
-        body: "Coil on the furnace, condenser outside on a pad or wall bracket, refrigerant lines, electrical and a drain for the condensation. [[CONFIRM: typical AC install time]]",
+        body: "Coil on the furnace, condenser outside on a pad or wall bracket, refrigerant lines, electrical and a drain for the condensation.",
       },
       {
         title: "Start-up",
@@ -428,7 +426,7 @@ export const SERVICES: Service[] = [
         ],
       },
     ],
-    cost: ["[[PRICING: AC install price range, if published]]", QUOTE_FIRST, "Ask about current rebates — programs change, so we'll check what's available when we quote."],
+    cost: [QUOTE_FIRST, SAME_RATE, "Ask about current rebates — programs change, so we'll check what's available when we quote."],
     related: ["heat-pump-installation-calgary", "ductless-mini-split-calgary", "furnace-installation-calgary"],
   },
 
@@ -498,7 +496,7 @@ export const SERVICES: Service[] = [
         ],
       },
     ],
-    cost: ["[[PRICING: heat pump install price range, if published]]", QUOTE_FIRST],
+    cost: [QUOTE_FIRST, SAME_RATE],
     related: ["ductless-mini-split-calgary", "air-conditioning-installation-calgary", "furnace-installation-calgary"],
   },
 
@@ -565,7 +563,7 @@ export const SERVICES: Service[] = [
         ],
       },
     ],
-    cost: ["[[PRICING: mini split price range, if published]]", QUOTE_FIRST, "Ask about current rebates when we quote."],
+    cost: [QUOTE_FIRST, SAME_RATE, "Ask about current rebates when we quote."],
     related: ["heat-pump-installation-calgary", "air-conditioning-installation-calgary", "ac-repair-calgary"],
   },
 
@@ -601,7 +599,7 @@ export const SERVICES: Service[] = [
       },
       {
         title: "Clean supply and return runs",
-        body: "Supply and return ducts are cleaned out, along with the registers and grilles. [[CONFIRM: duct cleaning method and equipment used]]",
+        body: "Supply and return ducts are cleaned out, along with the registers and grilles.",
       },
       {
         title: "Clean the furnace side",
@@ -634,7 +632,7 @@ export const SERVICES: Service[] = [
         ],
       },
     ],
-    cost: ["[[PRICING: duct cleaning price, if published]]", QUOTE_FIRST],
+    cost: [QUOTE_FIRST, SAME_RATE],
     related: ["hvac-maintenance-calgary", "furnace-repair-calgary", "furnace-installation-calgary"],
   },
 
@@ -685,6 +683,7 @@ export const SERVICES: Service[] = [
         heading: "When to book",
         paras: [
           "Furnace: late summer or early fall, before you switch the heat on for good. Once the first cold snap hits, everyone calls at once. AC and heat pump: spring, before the first hot week.",
+          "Just bought the house and nobody knows when the furnace was last serviced? Book one now, whatever the season.",
         ],
       },
       {
@@ -711,12 +710,8 @@ export const SERVICES: Service[] = [
           "Test your carbon monoxide alarm.",
         ],
       },
-      {
-        heading: "Maintenance plans",
-        paras: ["[[CONFIRM: does GBL HVAC offer a maintenance plan? If yes, describe it here. If no, delete this section.]]"],
-      },
     ],
-    cost: ["[[PRICING: tune-up price, if published]]", QUOTE_FIRST],
+    cost: [QUOTE_FIRST, SAME_RATE],
     related: ["furnace-repair-calgary", "duct-cleaning-calgary", "ac-repair-calgary"],
   },
 ];

@@ -7,11 +7,11 @@ export const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Do you charge more at night or on weekends?",
-    a: "[[CONFIRM WITH CLIENT: after-hours / weekend pricing]] Either way, you get the price before any work starts.",
+    a: "No. Same rate day or night, weekends and holidays. A 2am call costs the same as a 2pm call, and you get the price before any work starts.",
   },
   {
     q: "How fast can you get here?",
-    a: "[[CONFIRM: how arrival times are handled]] Call 403-970-6988 and ask — you'll get a straight answer for your part of the city.",
+    a: "We're on call 24/7 across Calgary and the surrounding towns. Call 403-970-6988 and ask — you'll get a straight answer on when we can be there for your part of the city.",
   },
   {
     q: "Should I repair or replace a 15-year-old furnace?",
@@ -19,7 +19,7 @@ export const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "How long does a furnace replacement take?",
-    a: "A straight swap — old furnace out, new one in, same spot — is usually a one-day job. [[CONFIRM: typical changeout time]] Moving the furnace, changing venting or adding AC at the same time can add time. You'll know the plan before we start.",
+    a: "A straight swap — old furnace out, new one in, same spot — is usually a one-day job. Moving the furnace, changing venting or adding AC at the same time can add time. You'll know the plan before we start.",
   },
   {
     q: "Do heat pumps actually work in Calgary winters?",

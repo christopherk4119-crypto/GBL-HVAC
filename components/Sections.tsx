@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BUSINESS } from "@/lib/site";
+import { AREA_SERVED, BUSINESS } from "@/lib/site";
 import { SERVICES, serviceHref } from "@/lib/services";
 import { CallButton, PhoneLink } from "./Call";
 import { ICONS, ArrowIcon, PinIcon } from "./Icons";
@@ -52,8 +52,7 @@ export function ServiceCard({ slug }: { slug: string }) {
 }
 
 export const AREA_QUADRANTS = ["Calgary NW", "Calgary NE", "Calgary SW", "Calgary SE"];
-// [[CONFIRM]] each town with the client before removing the marker.
-export const AREA_TOWNS = ["Airdrie", "Cochrane", "Okotoks", "Chestermere"];
+export const AREA_TOWNS = AREA_SERVED.slice(1);
 
 export function AreaList() {
   return (
@@ -69,7 +68,7 @@ export function AreaList() {
       <ul className="mt-2 flex flex-wrap gap-2">
         {AREA_TOWNS.map((t) => (
           <li key={t} className="rounded-lg border border-line bg-paper px-3 py-2 font-semibold text-ink-soft">
-            {t} <span className="text-sm text-flame-deep">[[CONFIRM]]</span>
+            {t}
           </li>
         ))}
       </ul>

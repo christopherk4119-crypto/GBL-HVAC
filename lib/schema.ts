@@ -1,4 +1,4 @@
-import { BUSINESS, BUSINESS_ID, SITE_URL } from "./site";
+import { AREA_SERVED, BUSINESS, BUSINESS_ID, SITE_URL } from "./site";
 import type { Service } from "./services";
 
 // Service-area business: no address block. No aggregateRating / Review — none exist.
@@ -11,7 +11,7 @@ export const businessSchema = {
   url: SITE_URL,
   telephone: BUSINESS.phoneE164,
   foundingDate: BUSINESS.founded,
-  areaServed: [{ "@type": "City", name: "Calgary" }],
+  areaServed: AREA_SERVED.map((name) => ({ "@type": "City", name })),
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -32,7 +32,7 @@ export function serviceSchema(s: Service) {
     description: s.description,
     url: `${SITE_URL}/services/${s.slug}`,
     provider: { "@id": BUSINESS_ID },
-    areaServed: [{ "@type": "City", name: "Calgary" }],
+    areaServed: AREA_SERVED.map((name) => ({ "@type": "City", name })),
   };
 }
 

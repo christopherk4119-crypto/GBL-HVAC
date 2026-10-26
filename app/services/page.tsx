@@ -33,8 +33,7 @@ export default function ServicesIndex() {
           ))}
         </ul>
         <p className="mt-6 text-lg text-ink-soft">
-          {/* [[CONFIRM]] Refrigeration is painted on the truck but not in the Yelp service list. */}
-          Commercial refrigeration is also on the truck — call to ask what we cover.
+          We also do commercial refrigeration — call to talk about your job.
         </p>
       </section>
       <FinalCta />

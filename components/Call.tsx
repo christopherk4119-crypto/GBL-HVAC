@@ -14,7 +14,7 @@ export function PhoneLink({ className = "" }: { className?: string }) {
 /** The big one. Primary action on every page. */
 export function CallButton({
   label = "Call now",
-  sub = "Answered 24 hours, 7 days",
+  sub = "Answered 24/7 · No extra charge for nights or weekends",
   size = "lg",
   className = "",
 }: {
