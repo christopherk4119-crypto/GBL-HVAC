@@ -170,7 +170,7 @@ export default function Home() {
               Quinn answers the phone. Not a call centre. Not a dispatcher.
             </p>
             <p className="mt-3 text-lg text-ink-soft">
-              [[PLACEHOLDER: a sentence in the owner&apos;s own words about how they work]]
+              He runs 24/7 — nights, weekends, holidays — because that&apos;s when furnaces quit.
             </p>
             <p className="mt-3 text-lg text-ink-soft">
               17 years in the trade, commercial and residential — from restaurants and coffee shops to the furnace in your basement.
