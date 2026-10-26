@@ -12,6 +12,7 @@ export const BUSINESS = {
   smsHref: "sms:+14039706988",
   hours: "24 hours a day, 7 days a week",
   area: "Calgary and surrounding area",
+  founded: "2026-05", // GBL HVAC started May 2026; owner has 17 years in the trade before that
 } as const;
 
 // Production domain. Canonicals, sitemap, robots and schema @id all derive from this.

@@ -174,6 +174,7 @@ export default function Home() {
             </p>
             <p className="mt-3 text-lg text-ink-soft">
               17 years in the trade, commercial and residential — from restaurants and coffee shops to the furnace in your basement.
+              In May 2026 he went out on his own and started GBL HVAC.
             </p>
             <CallButton size="md" className="mt-6" label="Call" sub={null} />
           </div>

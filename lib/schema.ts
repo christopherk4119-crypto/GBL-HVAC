@@ -10,6 +10,7 @@ export const businessSchema = {
   description: "24/7 furnace repair, HVAC installation, maintenance and air conditioning service in Calgary.",
   url: SITE_URL,
   telephone: BUSINESS.phoneE164,
+  foundingDate: BUSINESS.founded,
   areaServed: [{ "@type": "City", name: "Calgary" }],
   openingHoursSpecification: [
     {
