@@ -5,12 +5,13 @@ import { StickyCallBar } from "@/components/StickyCallBar";
 import { Footer } from "@/components/Sections";
 import { JsonLd } from "@/components/JsonLd";
 import { businessSchema } from "@/lib/schema";
-import { SITE_URL } from "@/lib/site";
+import { NOINDEX, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "24/7 Furnace Repair & HVAC Calgary | GBL HVAC",
   description: "Furnace repair, HVAC installation and AC service across Calgary. We answer 24/7 — call 403-970-6988.",
+  robots: NOINDEX ? { index: false, follow: false } : undefined,
   formatDetection: { telephone: false }, // we mark up every number ourselves
   openGraph: { siteName: "GBL HVAC", locale: "en_CA", type: "website" },
 };

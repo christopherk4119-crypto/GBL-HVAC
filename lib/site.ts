@@ -15,9 +15,12 @@ export const BUSINESS = {
   founded: "2026-05", // GBL HVAC started May 2026; owner has 17 years in the trade before that
 } as const;
 
-// Production domain. Canonicals, sitemap, robots and schema @id all derive from this.
-// NEXT_PUBLIC_SITE_URL can override it (e.g. for a staging deploy).
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.gblhvac.ca").replace(/\/$/, "");
+// This repo is NOT the live gblhvac.ca site, so it must not claim that domain.
+// Canonicals, sitemap, robots and schema @id all derive from this.
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://gbl-hvac.vercel.app").replace(/\/$/, "");
+
+// Kept out of search engines entirely so it can't compete with the real site.
+export const NOINDEX = true;
 
 // Calgary plus the surrounding towns Quinn covers. Feeds schema areaServed.
 export const AREA_SERVED = ["Calgary", "Airdrie", "Cochrane", "Okotoks", "Chestermere"];
