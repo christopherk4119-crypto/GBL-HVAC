@@ -24,7 +24,5 @@ export const AREA_SERVED = ["Calgary", "Airdrie", "Cochrane", "Okotoks", "Cheste
 
 export const BUSINESS_ID = `${SITE_URL}/#business`;
 
-// [[CONFIRM]] Quote form opens a pre-filled text message to the business number.
-// Only works if 403-970-6988 can receive SMS. If it's a landline, set to false
-// and the contact page shows call-only.
+// Quote form opens a pre-filled text message to the business number (owner confirmed it takes texts).
 export const QUOTE_BY_TEXT = true;
